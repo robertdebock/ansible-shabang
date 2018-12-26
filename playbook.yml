@@ -1,0 +1,46 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: setup shared items on all machines
+  hosts: all
+  gather_facts: no
+  become: yes
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.update
+    - robertdebock.common
+    - robertdebock.users
+    - robertdebock.investigate
+    - robertdebock.selinux
+    - robertdebock.ntp
+    - robertdebock.rsyslog
+    - robertdebock.firewall
+    - robertdebock.epel
+    - robertdebock.fail2ban
+    - robertdebock.postfix
+    - robertdebock.zabbix_repository
+    - robertdebock.zabbix_agent
+
+- name: setup the backend machine (node3)
+  hosts: backend
+  gather_facts: yes
+  become: yes
+
+  roles:
+    - robertdebock.python_pip
+    - robertdebock.httpd
+    - robertdebock.mysql
+    - robertdebock.php
+    - robertdebock.zabbix_server
+    - robertdebock.zabbix_web
+
+- name: setup frontend machine (node1)
+  hosts: frontend
+  gather_facts: yes
+  become: yes
+
+  roles:
+    - robertdebock.python_pip
+    - robertdebock.httpd
+    - robertdebock.php
+    - robertdebock.ca

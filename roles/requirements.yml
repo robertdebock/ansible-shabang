@@ -1,0 +1,23 @@
+---
+- robertdebock.bootstrap
+- robertdebock.ca
+- robertdebock.common
+- robertdebock.epel
+- robertdebock.fail2ban
+- robertdebock.firewall
+- robertdebock.httpd
+- robertdebock.investigate
+- robertdebock.mysql
+- robertdebock.ntp
+- robertdebock.php
+- robertdebock.postfix
+- robertdebock.python_pip
+- robertdebock.reboot
+- robertdebock.rsyslog
+- robertdebock.selinux
+- robertdebock.update
+- robertdebock.users
+- robertdebock.zabbix_repository
+- robertdebock.zabbix_agent
+- robertdebock.zabbix_server
+- robertdebock.zabbix_web

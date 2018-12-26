@@ -1,0 +1,16 @@
+[frontend]
+node1.example.com
+
+[application]
+node2.example.com
+
+[backend]
+node3.example.com
+
+[rsyslogclient]
+node1.example.com
+node2.example.com
+
+[postfixclient]
+node1.example.com
+node2.example.com

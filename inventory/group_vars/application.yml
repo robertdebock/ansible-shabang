@@ -1,0 +1,5 @@
+---
+firewall_services:
+  - name: ssh
+  - name: 10050
+    proto: tcp
