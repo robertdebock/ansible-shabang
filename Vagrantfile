@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
     node3.vm.box = "centos/7"
     node3.vm.synced_folder '.', '/vagrant', disabled: true
     node3.vm.provider :libvirt do |domain|
-        domain.memory = 2048
+        domain.memory = 4096
         domain.cpus = 2
     end
   end

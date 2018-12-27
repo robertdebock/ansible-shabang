@@ -33,6 +33,7 @@
     - robertdebock.php
     - robertdebock.zabbix_server
     - robertdebock.zabbix_web
+    - robertdebock.awx
 
 - name: setup frontend machine (node1)
   hosts: frontend
