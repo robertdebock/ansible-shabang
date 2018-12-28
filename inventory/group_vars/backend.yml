@@ -7,12 +7,15 @@ mysql_users:
     priv: "zabbix.*:ALL"
     encoding: utf8
     collation: utf8_bin
-    host: "localhost"
+  - name: roundcube
+    password: pass
+    priv: "roundcubemail.*:ALL"
 
 mysql_databases:
   - name: zabbix
     encoding: utf8
     collation: utf8_bin
+  - name: roundcubemail
 
 rsyslog_receiver: yes
 

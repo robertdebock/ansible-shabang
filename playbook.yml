@@ -31,9 +31,10 @@
     - robertdebock.httpd
     - robertdebock.mysql
     - robertdebock.php
+    - robertdebock.dovecot
+    - robertdebock.roundcubemail
     - robertdebock.zabbix_server
     - robertdebock.zabbix_web
-    - robertdebock.awx
 
 - name: setup frontend machine (node1)
   hosts: frontend
