@@ -23,6 +23,8 @@ firewall_services:
   - name: ssh
   - name: mysql
   - name: http
+  - name: pop3
+  - name: imap
   - name: https
   - name: 514
     protocol: tcp

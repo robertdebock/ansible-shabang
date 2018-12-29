@@ -9,6 +9,7 @@
 - robertdebock.firewall
 - robertdebock.httpd
 - robertdebock.investigate
+- robertdebock.java
 - robertdebock.mysql
 - robertdebock.ntp
 - robertdebock.php
@@ -18,6 +19,7 @@
 - robertdebock.roundcubemail
 - robertdebock.rsyslog
 - robertdebock.selinux
+- robertdebock.tomcat
 - robertdebock.update
 - robertdebock.users
 - robertdebock.zabbix_repository

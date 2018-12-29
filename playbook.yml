@@ -36,6 +36,15 @@
     - robertdebock.zabbix_server
     - robertdebock.zabbix_web
 
+- name: setup application machine (node2)
+  hosts: application
+  gather_facts: yes
+  become: yes
+
+  roles:
+    - robertdebock.java
+    - robertdebock.tomcat
+
 - name: setup frontend machine (node1)
   hosts: frontend
   gather_facts: yes
