@@ -1,6 +1,6 @@
 # Ansible SHABANG
 
-## A way to test integration locally.
+## A way to test integration of Ansible roles
 
 To test Ansible Roles, this environment can be used. The goal of this repository is to:
 - Quickly test combinations of roles
@@ -33,6 +33,14 @@ Download all roles first.
 ```
 ansible-galaxy install --role-file roles/requirements.yml
 ```
+
+Next start machine locally.
+
+```
+vagrant up
+```
+
+Remember to `vagrant destroy` when you're done testing.
 
 ### Build (or rebuild)
 
