@@ -6,7 +6,7 @@ firewall_services:
   - name: 10050
     proto: tcp
 
-httpd_applications:
+httpd_locations:
   - name: zabbix
     location: /zabbix
     backend_url: https://node3.example.com/zabbix

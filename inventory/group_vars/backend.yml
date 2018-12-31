@@ -1,4 +1,26 @@
 ---
+squid_cache_dir: aufs /var/spool/squid 16000 16 256 max-size=8589934592
+
+squid_cache_replacement_policy: heap LFUDA
+
+squid_maximum_object_size_mb: 256
+
+squid_acls:
+  - name: repmod
+    classifier: url_regex
+    value: '/repomd\.xml$'
+
+squid_cache_rules:
+  - decision: deny
+    acl: repmod
+
+httpd_vhosts:
+  - name: fedoraproxy
+    servername: "{{ ansible_default_ipv4.address }}"
+    documentroot: /var/www/html
+    backend_url: "http://dl.fedoraproject.org/pub/fedora/linux/"
+    remote: "http://localhost:3128/"
+
 mysql_bind_address: 0.0.0.0
 
 mysql_users:
@@ -28,6 +50,7 @@ firewall_services:
   - name: https
   - name: 514
     protocol: tcp
+  - name: squid
   - name: 10050
     proto: tcp
   - name: 10051

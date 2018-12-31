@@ -1,5 +1,17 @@
 #!/usr/bin/env ansible-playbook
 ---
+- name: setup package repository cache
+  hosts: backend
+  gather_facts: no
+  become: yes
+
+  roles:
+    - robertdebock.bootstrap
+    - robertdebock.squid
+    - robertdebock.epel
+    - robertdebock.python_pip
+    - robertdebock.httpd
+
 - name: setup shared items on all machines
   hosts: all
   gather_facts: no

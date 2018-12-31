@@ -19,6 +19,7 @@ To test Ansible Roles, this environment can be used. The goal of this repository
 |                |   |                |   | - zabbix-agent  |
 |                |   |                |   | - zabbix-server |
 |                |   |                |   | - zabbix_web    |
+|                |   |                |   | - squid         |
 +----------------+   +----------------+   +-----------------+
 ```
 
