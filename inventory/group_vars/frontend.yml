@@ -5,3 +5,11 @@ firewall_services:
   - name: https
   - name: 10050
     proto: tcp
+
+httpd_applications:
+  - name: zabbix
+    location: /zabbix
+    backend_url: https://node3.example.com/zabbix
+  - name: roundcubemail
+    location: /roundcubemail
+    backend_url: https://node3.example.com/roundcubemail
