@@ -12,6 +12,14 @@
     - robertdebock.python_pip
     - robertdebock.httpd
 
+- name: bootstrap all hosts
+  hosts: all
+  gather_facts: no
+  become: yes
+
+  roles:
+    - robertdebock.bootstrap
+
 - name: setup shared items on all machines
   hosts: all
   gather_facts: no
@@ -19,7 +27,6 @@
   serial: 1
 
   roles:
-    - robertdebock.bootstrap
     - robertdebock.update
     - robertdebock.common
     - robertdebock.users
