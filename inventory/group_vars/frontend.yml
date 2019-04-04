@@ -5,11 +5,20 @@ firewall_services:
   - name: https
   - name: 10050
     proto: tcp
+  - name: openvpn
 
 httpd_locations:
+  - name: application
+    location: /application
+    backend_url: https://node2.example.com/application
   - name: zabbix
     location: /zabbix
     backend_url: https://node3.example.com/zabbix
   - name: roundcubemail
     location: /roundcubemail
     backend_url: https://node3.example.com/roundcubemail
+
+openvpn_server: yes
+
+ca_requests:
+  - name: server

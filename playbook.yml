@@ -64,6 +64,8 @@
   roles:
     - robertdebock.java
     - robertdebock.tomcat
+    - robertdebock.python_pip
+    - robertdebock.httpd
 
 - name: setup frontend machine (node1)
   hosts: frontend
@@ -75,3 +77,4 @@
     - robertdebock.httpd
     - robertdebock.php
     - robertdebock.ca
+    # - robertdebock.openvpn

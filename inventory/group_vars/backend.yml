@@ -95,3 +95,7 @@ zabbix_web_hosts:
       - example.com
     link_templates:
       - Template OS Linux
+
+openvpn_client: yes
+ca_requests:
+  - name: client

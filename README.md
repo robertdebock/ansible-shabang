@@ -14,14 +14,21 @@ To test Ansible Roles, this environment can be used. The goal of this repository
 +---- node1 -----+   +---- node2 -----+   +----- node3 -----+
 | - httpd        |   | - zabbix_agent |   | - mysql         |
 | - zabbix_agent |   |                |   | - rsyslog       |
-|                |   |                |   | - postfix       |
-|                |   |                |   | - httpd         |
+| - ca           |   |                |   | - postfix       |
+| - openvpn      |   |                |   | - httpd         |
 |                |   |                |   | - zabbix-agent  |
 |                |   |                |   | - zabbix-server |
 |                |   |                |   | - zabbix_web    |
 |                |   |                |   | - squid         |
 +----------------+   +----------------+   +-----------------+
 ```
+
+## Entrypoints
+
+Once the environment is up (`vagrant up`) and running (`./playbook.yml`) you can use the entrypoints:
+
+- Zabbix: https://Admin:zabbix@node1.example.com/zabbix
+- Roundcubemail: https://node1.example.com/roundcubemail
 
 ## Settings
 

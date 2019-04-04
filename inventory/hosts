@@ -14,3 +14,9 @@ node2.example.com
 [postfixclient]
 node1.example.com
 node2.example.com
+
+[openvpnserver]
+node1.example.com
+
+[openvpnclient]
+node3.example.com
