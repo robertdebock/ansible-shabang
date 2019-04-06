@@ -12,7 +12,7 @@
 - robertdebock.java
 - robertdebock.mysql
 - robertdebock.ntp
-# - robertdebock.openvpn
+- robertdebock.openvpn
 - robertdebock.php
 - robertdebock.postfix
 - robertdebock.python_pip
