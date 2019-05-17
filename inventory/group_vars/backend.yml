@@ -35,8 +35,8 @@ mysql_users:
     encoding: utf8
     collation: utf8_bin
   - name: roundcube
-    password: pass
-    priv: "roundcubemail.*:ALL"
+    password: roundcube
+    priv: "roundcube.*:ALL"
 
 mysql_databases:
   - name: zabbix
