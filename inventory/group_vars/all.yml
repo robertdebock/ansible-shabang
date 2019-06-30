@@ -45,7 +45,7 @@ auditd_rules:
     action: always
     filter: exit
     filters:
-      - auid!=4294967295
+      - "auid!=4294967295"
     keyname: my_keyname
   - syscall: adjtimex
     action: always

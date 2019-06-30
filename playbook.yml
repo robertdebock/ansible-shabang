@@ -27,6 +27,7 @@
   serial: 1
 
   roles:
+    - robertdebock.auditd
     - robertdebock.update
     - robertdebock.common
     - robertdebock.users
