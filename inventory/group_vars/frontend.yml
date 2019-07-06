@@ -17,6 +17,9 @@ httpd_locations:
   - name: roundcubemail
     location: /roundcubemail
     backend_url: https://node3.example.com/roundcubemail
+  - name: artifactory
+    location: /artifactory
+    backend_url: https://node3.example.com/artifactory
 
 openvpn_server: yes
 

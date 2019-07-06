@@ -1,4 +1,5 @@
 ---
+- robertdebock.artifactory
 - robertdebock.auditd
 - robertdebock.bootstrap
 - robertdebock.buildtools
@@ -21,6 +22,7 @@
 - robertdebock.roundcubemail
 - robertdebock.rsyslog
 - robertdebock.selinux
+- robertdebock.service
 - robertdebock.squid
 - robertdebock.tomcat
 - robertdebock.update
