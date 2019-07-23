@@ -51,6 +51,7 @@
     - robertdebock.python_pip
     - robertdebock.httpd
     - robertdebock.mysql
+    - robertdebock.remi
     - robertdebock.php
     - robertdebock.dovecot
     - robertdebock.roundcubemail
@@ -78,6 +79,7 @@
   roles:
     - robertdebock.python_pip
     - robertdebock.httpd
+    - robertdebock.remi
     - robertdebock.php
     - robertdebock.ca
     - robertdebock.openvpn
