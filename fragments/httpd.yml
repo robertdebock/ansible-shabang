@@ -1,0 +1,8 @@
+---
+- name: httpd
+  hosts: mediawiki
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.httpd

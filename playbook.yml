@@ -1,85 +1,30 @@
-#!/usr/bin/env ansible-playbook
+#!/usr/bin/ansible-playbook
 ---
-- name: setup package repository cache
-  hosts: backend
-  gather_facts: no
-  become: yes
-
-  roles:
-    - robertdebock.bootstrap
-    - robertdebock.squid
-    - robertdebock.epel
-    - robertdebock.python_pip
-    - robertdebock.httpd
-
-- name: bootstrap all hosts
-  hosts: all
-  gather_facts: no
-  become: yes
-
-  roles:
-    - robertdebock.bootstrap
-
-- name: setup shared items on all machines
-  hosts: all
-  gather_facts: no
-  become: yes
-  serial: 1
-
-  roles:
-    - robertdebock.auditd
-    - robertdebock.update
-    - robertdebock.common
-    - robertdebock.users
-    - robertdebock.investigate
-    - robertdebock.selinux
-    - robertdebock.ntp
-    - robertdebock.rsyslog
-    - robertdebock.firewall
-    - robertdebock.epel
-    - robertdebock.fail2ban
-    - robertdebock.postfix
-    - robertdebock.zabbix_repository
-    - robertdebock.zabbix_agent
-
-- name: setup the backend machine (node3)
-  hosts: backend
-  gather_facts: yes
-  become: yes
-
-  roles:
-    - robertdebock.python_pip
-    - robertdebock.httpd
-    - robertdebock.mysql
-    - robertdebock.remi
-    - robertdebock.php
-    - robertdebock.dovecot
-    - robertdebock.roundcubemail
-    - robertdebock.zabbix_server
-    - robertdebock.zabbix_web
-    - robertdebock.java
-    - robertdebock.artifactory
-
-- name: setup application machine (node2)
-  hosts: application
-  gather_facts: yes
-  become: yes
-
-  roles:
-    - robertdebock.java
-    - robertdebock.tomcat
-    - robertdebock.python_pip
-    - robertdebock.httpd
-
-- name: setup frontend machine (node1)
-  hosts: frontend
-  gather_facts: yes
-  become: yes
-
-  roles:
-    - robertdebock.python_pip
-    - robertdebock.httpd
-    - robertdebock.remi
-    - robertdebock.php
-    - robertdebock.ca
-    - robertdebock.openvpn
+- name: bootstrap
+  import_playbook: fragments/bootstrap.yml
+- name: common
+  import_playbook: fragments/common.yml
+- name: update
+  import_playbook: fragments/update.yml
+- name: firewall
+  import_playbook: fragments/firewall.yml
+- name: java
+  import_playbook: fragments/java.yml
+- name: artifactory
+  import_playbook: fragments/artifactory.yml
+- name: jenkins
+  import_playbook: fragments/jenkins.yml
+- name: buildtools
+  import_playbook: fragments/buildtools.yml
+- name: epel
+  import_playbook: fragments/epel.yml
+- name: python_pip
+  import_playbook: fragments/python_pip.yml
+- name: remi
+  import_playbook: fragments/remi.yml
+- name: php
+  import_playbook: fragments/php.yml
+- name: httpd
+  import_playbook: fragments/httpd.yml
+- name: mediawiki
+  import_playbook: fragments/mediawiki.yml

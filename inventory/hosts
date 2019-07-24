@@ -1,22 +1,11 @@
-[frontend]
-node1.example.com
+[jenkins]
+jenkins.example.com
 
-[application]
-node2.example.com
+[artifactory]
+artifactory.example.com
 
-[backend]
-node3.example.com
+[subversion]
+subversion.example.com
 
-[rsyslogclient]
-node1.example.com
-node2.example.com
-
-[postfixclient]
-node1.example.com
-node2.example.com
-
-[openvpnserver]
-node1.example.com
-
-[openvpnclient]
-node3.example.com
+[mediawiki]
+mediawiki.example.com

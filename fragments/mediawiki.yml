@@ -1,0 +1,8 @@
+---
+- name: mediawiki
+  hosts: mediawiki
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.mediawiki

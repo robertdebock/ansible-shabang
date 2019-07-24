@@ -1,0 +1,8 @@
+---
+- name: python_pip
+  hosts: mediawiki
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.python_pip

@@ -1,0 +1,8 @@
+---
+- name: jenkins
+  hosts: jenkins
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.jenkins

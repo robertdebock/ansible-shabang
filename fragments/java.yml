@@ -1,0 +1,8 @@
+---
+- name: java
+  hosts: artifactory:jenkins
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.java
