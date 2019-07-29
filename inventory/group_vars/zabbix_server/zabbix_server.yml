@@ -1,0 +1,3 @@
+zabbix_server_database_host: localhost
+zabbix_server_database_user: zabbix
+zabbix_server_database_password: zabbix

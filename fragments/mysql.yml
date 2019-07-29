@@ -1,0 +1,8 @@
+---
+- name: mysql
+  hosts: zabbix_server
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.mysql

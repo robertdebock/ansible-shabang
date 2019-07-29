@@ -12,6 +12,8 @@
   import_playbook: fragments/zabbix_repository.yml
 - name: zabbix_agent
   import_playbook: fragments/zabbix_agent.yml
+- name: mysql
+  import_playbook: fragments/mysql.yml
 - name: zabbix_server
   import_playbook: fragments/zabbix_server.yml
 - name: java
@@ -26,6 +28,8 @@
   import_playbook: fragments/epel.yml
 - name: python_pip
   import_playbook: fragments/python_pip.yml
+- name: zabbix_web
+  import_playbook: fragments/zabbix_web.yml
 - name: remi
   import_playbook: fragments/remi.yml
 - name: php
