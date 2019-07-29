@@ -1,0 +1,2 @@
+---
+zabbix_agent_server_active_address: hostvars[zabbix_server]['ansible_default_ipv4']['address']

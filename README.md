@@ -9,32 +9,41 @@ To test Ansible Roles, this environment can be used. The goal of this repository
 ## Overview
 
 ```text
-      FRONTEND             APPLICATION           BACKEND
++--- jenkins ---------+   +--- artifactory -----+
+| - bootstrap         |   | - bootstrap         |
+| - common            |   | - common            |
+| - update            |   | - update            |
+| - firewall          |   | - firewall          |
+| - java              |   | - java              |
+| - jenkins           |   | - artifactory       |
+| - zabbix_repository |   | - zabbix_repository |
+| - zabbix_agent      |   | - zabbix_agent      |
++---------------------+   +---------------------+
 
-+---- node1 -----+   +---- node2 -----+   +----- node3 -----+
-| - httpd        |   | - zabbix_agent |   | - mysql         |
-| - zabbix_agent |   |                |   | - rsyslog       |
-| - ca           |   |                |   | - postfix       |
-| - openvpn      |   |                |   | - httpd         |
-|                |   |                |   | - zabbix-agent  |
-|                |   |                |   | - zabbix-server |
-|                |   |                |   | - zabbix_web    |
-|                |   |                |   | - squid         |
-+----------------+   +----------------+   +-----------------+
++--- subversion ------+   +--- mediawiki -------+
+| - bootstrap         |   | - bootstrap         |
+| - common            |   | - common            |
+| - update            |   | - update            |
+| - firewall          |   | - firewall          |
+| - subversion        |   | - epel              |
+| - zabbix_repository |   | - python_pip        |
+| - zabbix_agent      |   | - remi              |
+|                     |   | - php               |
+|                     |   | - httpd             |
+|                     |   | - mediawiki         |
+|                     |   | - zabbix_repository |
+|                     |   | - zabbix_agent      |
++---------------------+   +---------------------+
+
++--- zabbix_server ---+
+| - bootstrap         |
+| - zabbix_repository |
+| - zabbix_server     |
+| - zabbix_agent      |
++---------------------+
 ```
 
-## Entrypoints
-
-Once the environment is up (`vagrant up`) and running (`./playbook.yml`) you can use the entrypoints:
-
-- Zabbix: https://Admin:zabbix@node1.example.com/zabbix
-- Roundcubemail: https://node1.example.com/roundcubemail
-
-## Settings
-
-All roles are called in `playbook.yml` and all variable (for the roles) are set in `inventory/group_vars/*.yml`.
-
-### Setup
+## Setup
 
 Download all roles first.
 
@@ -50,8 +59,12 @@ vagrant up
 
 Remember to `vagrant destroy` when you're done testing.
 
-### Build (or rebuild)
+## Build (or rebuild)
 
 ```
 ansible-playbook playbook.yml
 ```
+
+## Organization of plays
+
+The `playbook.yml` refers plays in `fragments/`. These fragments can be started individually too.

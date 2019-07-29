@@ -1,0 +1,8 @@
+---
+- name: zabbix_agent
+  hosts: all
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.zabbix_agent

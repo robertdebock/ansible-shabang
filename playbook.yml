@@ -8,6 +8,12 @@
   import_playbook: fragments/update.yml
 - name: firewall
   import_playbook: fragments/firewall.yml
+- name: zabbix_repository
+  import_playbook: fragments/zabbix_repository.yml
+- name: zabbix_agent
+  import_playbook: fragments/zabbix_agent.yml
+- name: zabbix_server
+  import_playbook: fragments/zabbix_server.yml
 - name: java
   import_playbook: fragments/java.yml
 - name: artifactory

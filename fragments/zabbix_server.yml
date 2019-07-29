@@ -1,0 +1,8 @@
+---
+- name: zabbix_server
+  hosts: zabbix_server
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.zabbix_server

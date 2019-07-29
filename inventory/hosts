@@ -9,3 +9,6 @@ subversion.example.com
 
 [mediawiki]
 mediawiki.example.com
+
+[zabbix_server]
+zabbix.example.com

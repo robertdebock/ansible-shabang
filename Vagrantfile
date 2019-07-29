@@ -19,7 +19,7 @@ Vagrant.configure("2") do |config|
     node3.vm.box = "centos/7"
     node3.vm.synced_folder '.', '/vagrant', disabled: true
     node3.vm.provider :libvirt do |domain|
-        domain.memory = 4096
+        domain.memory = 2048
         domain.cpus = 2
     end
   end
@@ -27,7 +27,15 @@ Vagrant.configure("2") do |config|
     node4.vm.box = "centos/7"
     node4.vm.synced_folder '.', '/vagrant', disabled: true
     node4.vm.provider :libvirt do |domain|
-        domain.memory = 4096
+        domain.memory = 1024
+        domain.cpus = 2
+    end
+  end
+  config.vm.define "zabbix.example.com" do |node5|
+    node5.vm.box = "centos/7"
+    node5.vm.synced_folder '.', '/vagrant', disabled: true
+    node5.vm.provider :libvirt do |domain|
+        domain.memory = 1024
         domain.cpus = 2
     end
   end

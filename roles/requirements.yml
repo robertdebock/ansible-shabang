@@ -14,3 +14,6 @@
 - robertdebock.remi
 - robertdebock.service
 - robertdebock.update
+- robertdebock.zabbix_repository
+- robertdebock.zabbix_agent
+- robertdebock.zabbix_server
