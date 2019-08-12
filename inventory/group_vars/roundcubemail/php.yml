@@ -1,0 +1,14 @@
+---
+php_settings:
+  upload_max_filesize:
+    section: PHP
+    value: 5M
+  post_max_size:
+    section: PHP
+    value: 6M
+  date.timezone:
+    section: Date
+    value: Europe/Amsterdam
+  extension:
+    section: PHP
+    value: mcrypt.so

@@ -2,6 +2,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "artifactory.example.com" do |node1|
     node1.vm.box = "centos/7"
     node1.vm.synced_folder '.', '/vagrant', disabled: true
+    node1.vm.network "forwarded_port", guest: 443, host: 1443
     node1.vm.provider :libvirt do |domain|
         domain.memory = 2048
         domain.cpus = 2
@@ -10,6 +11,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "jenkins.example.com" do |node2|
     node2.vm.box = "centos/7"
     node2.vm.synced_folder '.', '/vagrant', disabled: true
+    node2.vm.network "forwarded_port", guest: 443, host: 2443
     node2.vm.provider :libvirt do |domain|
         domain.memory = 2048
         domain.cpus = 2
@@ -18,6 +20,7 @@ Vagrant.configure("2") do |config|
   config.vm.define "mediawiki.example.com" do |node3|
     node3.vm.box = "centos/7"
     node3.vm.synced_folder '.', '/vagrant', disabled: true
+    node3.vm.network "forwarded_port", guest: 443, host: 3443
     node3.vm.provider :libvirt do |domain|
         domain.memory = 2048
         domain.cpus = 2
@@ -34,7 +37,17 @@ Vagrant.configure("2") do |config|
   config.vm.define "zabbix.example.com" do |node5|
     node5.vm.box = "centos/7"
     node5.vm.synced_folder '.', '/vagrant', disabled: true
+    node5.vm.network "forwarded_port", guest: 443, host: 5443
     node5.vm.provider :libvirt do |domain|
+        domain.memory = 1024
+        domain.cpus = 2
+    end
+  end
+  config.vm.define "dovecot.example.com" do |node6|
+    node6.vm.box = "centos/7"
+    node6.vm.synced_folder '.', '/vagrant', disabled: true
+    node6.vm.network "forwarded_port", guest: 110, host: 6110
+    node6.vm.provider :libvirt do |domain|
         domain.memory = 1024
         domain.cpus = 2
     end

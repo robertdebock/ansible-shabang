@@ -12,3 +12,9 @@ mediawiki.example.com
 
 [zabbix_server]
 zabbix.example.com
+
+[dovecot]
+dovecot.example.com
+
+[roundcubemail]
+dovecot.example.com

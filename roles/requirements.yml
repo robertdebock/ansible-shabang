@@ -3,6 +3,7 @@
 - robertdebock.bootstrap
 - robertdebock.buildtools
 - robertdebock.common
+- robertdebock.dovecot
 - robertdebock.epel
 - robertdebock.firewall
 - robertdebock.httpd

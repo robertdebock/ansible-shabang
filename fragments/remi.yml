@@ -1,6 +1,6 @@
 ---
-- name: epel
-  hosts: mediawiki
+- name: remi
+  hosts: mediawiki:roundcubemail
   gather_facts: no
   become: yes
 

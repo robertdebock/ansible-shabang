@@ -1,0 +1,8 @@
+---
+- name: roundcubemail
+  hosts: roundcubemail
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.roundcubemail

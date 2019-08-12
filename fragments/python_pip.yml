@@ -1,6 +1,6 @@
 ---
 - name: python_pip
-  hosts: mediawiki:zabbix_server
+  hosts: mediawiki:zabbix_server:roundcubemail
   gather_facts: no
   become: yes
 

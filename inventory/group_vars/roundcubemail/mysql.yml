@@ -1,0 +1,7 @@
+---
+mysql_databases:
+  - name: roundcube
+mysql_users:
+  - name: roundcube
+    password: roundcube
+    priv: "roundcube.*:ALL"

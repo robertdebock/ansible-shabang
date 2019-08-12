@@ -1,6 +1,6 @@
 ---
 - name: php
-  hosts: mediawiki
+  hosts: mediawiki:roundcubemail
   gather_facts: no
   become: yes
 
