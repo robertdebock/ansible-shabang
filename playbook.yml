@@ -8,6 +8,8 @@
   import_playbook: fragments/update.yml
 - name: firewall
   import_playbook: fragments/firewall.yml
+- name: users
+  import_playbook: fragments/users.yml
 - name: zabbix_repository
   import_playbook: fragments/zabbix_repository.yml
 - name: zabbix_agent

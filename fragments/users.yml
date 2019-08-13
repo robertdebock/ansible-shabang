@@ -1,0 +1,8 @@
+---
+- name: users
+  hosts: all
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.users
