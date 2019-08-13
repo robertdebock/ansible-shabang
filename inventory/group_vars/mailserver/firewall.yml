@@ -1,0 +1,7 @@
+---
+firewall_services:
+  - name: ssh
+  - name: pop3
+  - name: imap
+  - name: http
+  - name: https

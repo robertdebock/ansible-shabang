@@ -1,6 +1,6 @@
 ---
 - name: mysql
-  hosts: zabbix_server:roundcubemail
+  hosts: zabbix_server:mailserver
   gather_facts: no
   become: yes
 

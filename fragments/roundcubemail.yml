@@ -1,6 +1,6 @@
 ---
 - name: roundcubemail
-  hosts: roundcubemail
+  hosts: mailserver
   gather_facts: no
   become: yes
 
