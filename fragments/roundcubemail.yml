@@ -1,7 +1,7 @@
 ---
 - name: roundcubemail
   hosts: mailserver
-  gather_facts: no
+  gather_facts: yes
   become: yes
 
   roles:
