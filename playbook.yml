@@ -6,6 +6,8 @@
   import_playbook: fragments/common.yml
 - name: update
   import_playbook: fragments/update.yml
+- name: selinux
+  import_playbook: fragments/selinux.yml
 - name: firewall
   import_playbook: fragments/firewall.yml
 - name: users
