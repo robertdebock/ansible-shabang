@@ -1,0 +1,8 @@
+---
+- name: core_dependencies
+  hosts: all
+  gather_facts: no
+  become: yes
+
+  roles:
+    - role: robertdebock.core_dependencies

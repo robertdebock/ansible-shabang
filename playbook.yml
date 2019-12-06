@@ -2,6 +2,8 @@
 ---
 - name: bootstrap
   import_playbook: fragments/bootstrap.yml
+- name: core_dependencies
+  import_playbook: fragments/core_dependencies.yml
 - name: common
   import_playbook: fragments/common.yml
 - name: update

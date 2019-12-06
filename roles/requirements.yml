@@ -3,6 +3,7 @@
 - robertdebock.bootstrap
 - robertdebock.buildtools
 - robertdebock.common
+- robertdebock.code_dependencies
 - robertdebock.dovecot
 - robertdebock.epel
 - robertdebock.firewall
