@@ -46,7 +46,7 @@ Vagrant.configure("2") do |config|
         domain.cpus = 2
     end
   end
-  config.vm.define "mailserver.example.com" do |node6|
+  config.vm.define "management.example.com" do |node6|
     node6.vm.box = "centos/7"
     node6.vm.synced_folder '.', '/vagrant', disabled: true
     node6.vm.network "forwarded_port", guest: 110, host: 6110, host_ip: "0.0.0.0

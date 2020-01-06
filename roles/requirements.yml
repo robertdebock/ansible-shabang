@@ -1,4 +1,6 @@
 ---
+- robertdebock.ansible
+- robertdebock.auto_update
 - robertdebock.artifactory
 - robertdebock.bootstrap
 - robertdebock.buildtools
@@ -14,7 +16,7 @@
 - robertdebock.mysql
 - robertdebock.php
 - robertdebock.python_pip
-- robertdebock.remi
+- robertdebock.roundcubemail
 - robertdebock.selinux
 - robertdebock.service
 - robertdebock.update

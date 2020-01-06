@@ -1,6 +1,6 @@
 ---
 - name: java
-  hosts: mailserver
+  hosts: management
   gather_facts: no
   become: yes
 

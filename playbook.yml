@@ -8,20 +8,14 @@
   import_playbook: fragments/common.yml
 - name: update
   import_playbook: fragments/update.yml
+- name: auto_update
+  import_playbook: fragments/auto_update.yml
 - name: selinux
   import_playbook: fragments/selinux.yml
 - name: firewall
   import_playbook: fragments/firewall.yml
 - name: users
   import_playbook: fragments/users.yml
-- name: zabbix_repository
-  import_playbook: fragments/zabbix_repository.yml
-- name: zabbix_agent
-  import_playbook: fragments/zabbix_agent.yml
-- name: mysql
-  import_playbook: fragments/mysql.yml
-- name: zabbix_server
-  import_playbook: fragments/zabbix_server.yml
 - name: java
   import_playbook: fragments/java.yml
 - name: artifactory
@@ -34,17 +28,25 @@
   import_playbook: fragments/epel.yml
 - name: python_pip
   import_playbook: fragments/python_pip.yml
-- name: remi
-  import_playbook: fragments/remi.yml
 - name: php
   import_playbook: fragments/php.yml
 - name: httpd
   import_playbook: fragments/httpd.yml
-- name: zabbix_web
-  import_playbook: fragments/zabbix_web.yml
 - name: mediawiki
   import_playbook: fragments/mediawiki.yml
 - name: dovecot
   import_playbook: fragments/dovecot.yml
 - name: roundcubemail
   import_playbook: fragments/roundcubemail.yml
+- name: ansible
+  import_playbook: fragments/ansible.yml
+- name: zabbix_repository
+  import_playbook: fragments/zabbix_repository.yml
+- name: zabbix_agent
+  import_playbook: fragments/zabbix_agent.yml
+- name: mysql
+  import_playbook: fragments/mysql.yml
+- name: zabbix_server
+  import_playbook: fragments/zabbix_server.yml
+- name: zabbix_web
+  import_playbook: fragments/zabbix_web.yml

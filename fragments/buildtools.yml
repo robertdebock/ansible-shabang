@@ -1,6 +1,6 @@
 ---
 - name: buildtools
-  hosts: mediawiki:zabbix_server:mailserver
+  hosts: mediawiki:zabbix_server:management
   gather_facts: no
   become: yes
 

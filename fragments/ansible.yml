@@ -1,0 +1,7 @@
+---
+- name: ansible
+  hosts: management
+  become: yes
+
+  roles:
+    - role: robertdebock.ansible

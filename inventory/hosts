@@ -13,5 +13,5 @@ mediawiki.example.com
 [zabbix_server]
 zabbix.example.com
 
-[mailserver]
-mailserver.example.com
+[management]
+management.example.com

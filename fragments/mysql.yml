@@ -1,6 +1,6 @@
 ---
 - name: mysql
-  hosts: zabbix_server:mailserver
+  hosts: zabbix_server:management
   gather_facts: no
   become: yes
 

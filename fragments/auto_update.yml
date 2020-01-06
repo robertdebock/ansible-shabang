@@ -1,0 +1,7 @@
+---
+- name: auto_update
+  hosts: all
+  become: yes
+
+  roles:
+    - role: robertdebock.auto_update
