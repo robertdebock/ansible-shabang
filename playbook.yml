@@ -50,3 +50,5 @@
   import_playbook: fragments/zabbix_server.yml
 - name: zabbix_web
   import_playbook: fragments/zabbix_web.yml
+- name: rundeck
+  import_playbook: fragments/rundeck.yml

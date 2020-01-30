@@ -4,7 +4,7 @@ Vagrant.configure("2") do |config|
     node1.vm.synced_folder '.', '/vagrant', disabled: true
     node1.vm.network "forwarded_port", guest: 443, host: 1443, host_ip: "0.0.0.0"
     node1.vm.provider :libvirt do |domain|
-        domain.memory = 2048
+        domain.memory = 1024
         domain.cpus = 2
     end
   end
@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
     node2.vm.network "forwarded_port", guest: 443, host: 2443, host_ip: "0.0.0.0
 "
     node2.vm.provider :libvirt do |domain|
-        domain.memory = 2048
+        domain.memory = 1024
         domain.cpus = 2
     end
   end
@@ -24,7 +24,7 @@ Vagrant.configure("2") do |config|
     node3.vm.network "forwarded_port", guest: 443, host: 3443, host_ip: "0.0.0.0
 "
     node3.vm.provider :libvirt do |domain|
-        domain.memory = 2048
+        domain.memory = 1024
         domain.cpus = 2
     end
   end
@@ -32,7 +32,7 @@ Vagrant.configure("2") do |config|
     node4.vm.box = "centos/7"
     node4.vm.synced_folder '.', '/vagrant', disabled: true
     node4.vm.provider :libvirt do |domain|
-        domain.memory = 1024
+        domain.memory = 512
         domain.cpus = 2
     end
   end
@@ -52,7 +52,7 @@ Vagrant.configure("2") do |config|
     node6.vm.network "forwarded_port", guest: 110, host: 6110, host_ip: "0.0.0.0
 "
     node6.vm.provider :libvirt do |domain|
-        domain.memory = 1024
+        domain.memory = 2048
         domain.cpus = 2
     end
   end
