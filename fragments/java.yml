@@ -1,6 +1,6 @@
 ---
 - name: java
-  hosts: artifactory:jenkins
+  hosts: artifactory:jenkins:management
   gather_facts: no
   become: yes
 
