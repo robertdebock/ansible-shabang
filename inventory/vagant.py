@@ -2,7 +2,9 @@
 """
 Vagrant external inventory script. Automatically finds the IP of the booted vagrant vm(s), and
 returns it under the host group 'vagrant'
+
 Example Vagrant configuration using this script:
+
     config.vm.provision :ansible do |ansible|
       ansible.playbook = "./provision/your_playbook.yml"
       ansible.inventory_path = "./provision/inventory/vagrant.py"
