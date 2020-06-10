@@ -8,43 +8,38 @@ To test Ansible Roles, this environment can be used. The goal of this repository
 
 ## Overview
 
+All machines get:
+- auto_update
+- bootstrap
+- common
+- core_dependencies
+- firewall
+- selinux
+- update
+- users
+- zabbix_agent
+- zabbix_repository
+
 ```text
-+--- jenkins ---------+   +--- artifactory -----+
-| - bootstrap         |   | - bootstrap         |
-| - common            |   | - common            |
-| - update            |   | - update            |
-| - firewall          |   | - firewall          |
-| - java              |   | - java              |
-| - jenkins           |   | - artifactory       |
-| - zabbix_repository |   | - zabbix_repository |
-| - zabbix_agent      |   | - zabbix_agent      |
-+---------------------+   +---------------------+
-
-+--- subversion ------+   +--- mediawiki -------+
-| - bootstrap         |   | - bootstrap         |
-| - common            |   | - common            |
-| - update            |   | - update            |
-| - firewall          |   | - firewall          |
-| - subversion        |   | - epel              |
-| - zabbix_repository |   | - python_pip        |
-| - zabbix_agent      |   | - remi              |
-|                     |   | - php               |
-|                     |   | - httpd             |
-|                     |   | - mediawiki         |
-|                     |   | - zabbix_repository |
-|                     |   | - zabbix_agent      |
-+---------------------+   +---------------------+
-
-+--- zabbix_server ---+
-| - bootstrap         |
-| - zabbix_repository |
-| - zabbix_server     |
-| - zabbix_agent      |
-+---------------------+
++--- jenkins ---+   +--- artifactory ---+            +--- management ------+
+| - java        |   | - java            |            | - ansible           |
+| - jenkins     |   | - artifactory     |            | - buildtools        |
++---------------+   +-------------------+            | - python_pip        |
+                                                     | - httpd             |
++--- subversion ------+    +--- mediawiki -------+   | - mysql             |
+| - subversion        |    | - epel              |   | - php               |
+| - zabbix_repository |    | - python_pip        |   | - remi              |
+| - zabbix_agent      |    | - remi              |   | - roundcubemail     |
++---------------------+    | - php               |   | - rundeck           |
+                           | - httpd             |   | - dovecot           |
+ +--- zabbix_server ---+   | - mediawiki         |   | - epel              |
+ | - zabbix_repository |   | - zabbix_repository |   +---------------------+
+ | - zabbix_server     |   | - zabbix_agent      |
+ | - zabbix_agent      |   +---------------------+ 
+ +---------------------+
 ```
 
 ## Setup
-
 Download all roles first.
 
 ```
